@@ -84,9 +84,12 @@ Another improvement we are considering is to develop customized events profiler 
 
 For the data processing, we will provide more scripts for various functionalities such as data visualization, basic data analysis and so on. The time line below indicates our short term plan.
 
+For better help user and developers to understand this project, we will upload a tester folder shortly. This folder will contain a simple executable file and a step by step guidance. With the execution of this toolchain, you will see how the raw data is collected and processed.
+
 - [ ] Automate the installation process.
 - [ ] Develop a main python script which combines all functions into one place.
 - [ ] Develop customized events profiler.
 - [ ] Data visualization script.
 - [ ] Data cleaning script.
+- [ ] Tester folder.
 - [ ] ...
