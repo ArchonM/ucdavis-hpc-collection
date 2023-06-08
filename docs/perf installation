@@ -1,0 +1,5 @@
+perf installation
+sudo apt update
+sudo apt install linux-tools-common
+sudo apt install linux-tools-$(uname -r)
+perf --version
