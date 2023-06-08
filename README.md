@@ -4,7 +4,7 @@ This repository serves as an automated toolchain for hpc events collection on in
 
 ## What is this repository for?
 
-This project aims to help researchers to collect hardware event information for further analysis. The toolchain is built on top of [Intel® VTune™ Amplifier](https://software.intel.com/en-us/intel-vtune-amplifier-xe) and [Intel® Performance Counter Monitor](https://software.intel.com/en-us/articles/intel-performance-counter-monitor-a-better-way-to-measure-cpu-utilization). The toolchain is designed to be easy to use and easy to extend.
+This project aims to help researchers to collect hardware event information for further analysis. The toolchain is built on top of [perf](https://perf.wiki.kernel.org/index.php/Main_Page). The toolchain is designed to be easy to use and easy to extend.
 
 ## Before start
 
@@ -63,3 +63,17 @@ When using pattern_extractor.py, since a pattern could repeat multiple times, ea
 ```bash
 python3 pattern_extractor.py /path/to/output/raw_data_file /path/to/output/csv_file
 ```
+
+## Future work
+
+To make the data collection proces much easier and for the convenience of users, we are planning to develop a main python script which combines all functions into one place. The main script will also provide a simple CLI where user can determine any possible parameters or variables. If it is possible, we might also consider provide GUI which allows users without programming background to use this toolchain.
+
+Another improvement we are considering is to develop customized events profiler instead of using existing tool such as perf. Therefore we can reach a higher profiling frequency and, potentially, a higher accuracy.
+
+For the data processing, we will provide more scripts for various functionalities such as data visualization, basic data analysis and so on. The time line below indicates our short term plan.
+
+- [ ] Develop a main python script which combines all functions into one place.
+- [ ] Develop customized events profiler.
+- [ ] Data visualization script.
+- [ ] Data cleaning script.
+  ...
