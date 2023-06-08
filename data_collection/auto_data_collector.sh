@@ -11,7 +11,7 @@ function init() {
     work_path=$(pwd)
     output_folder=$(basename ${target_executable})
     output_folder="${output_folder%.*}"
-    output_path="$work_path/../$output_folder"
+    output_path="$work_path/../output/$output_folder"
 }
 
 function user_check() {
