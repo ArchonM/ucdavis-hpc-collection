@@ -66,12 +66,15 @@ python3 pattern_extractor.py /path/to/output/raw_data_file /path/to/output/csv_f
 
 ## Future work
 
+The first think we are planning is to automate the installation process. Currently, the user will need to install perf and prepare working environment manually. We are planning to publish a script 'install.sh' which will automatically set the environment up for you.
+
 To make the data collection proces much easier and for the convenience of users, we are planning to develop a main python script which combines all functions into one place. The main script will also provide a simple CLI where user can determine any possible parameters or variables. If it is possible, we might also consider provide GUI which allows users without programming background to use this toolchain.
 
 Another improvement we are considering is to develop customized events profiler instead of using existing tool such as perf. Therefore we can reach a higher profiling frequency and, potentially, a higher accuracy.
 
 For the data processing, we will provide more scripts for various functionalities such as data visualization, basic data analysis and so on. The time line below indicates our short term plan.
 
+- [x] Automate the installation process.
 - [ ] Develop a main python script which combines all functions into one place.
 - [ ] Develop customized events profiler.
 - [ ] Data visualization script.
