@@ -74,7 +74,7 @@ Another improvement we are considering is to develop customized events profiler 
 
 For the data processing, we will provide more scripts for various functionalities such as data visualization, basic data analysis and so on. The time line below indicates our short term plan.
 
-- [x] Automate the installation process.
+- [ ] Automate the installation process.
 - [ ] Develop a main python script which combines all functions into one place.
 - [ ] Develop customized events profiler.
 - [ ] Data visualization script.
