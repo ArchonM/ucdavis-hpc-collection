@@ -13,6 +13,16 @@ To use this tool, you will first need to make sure the device you are using have
 If the version is lower than 4.4, you will need to update your perf tool.
 Moreover, this tool is only tested on Thinkpad t480s with Intel Core i5-8350U CPU. The system tested is Ubuntu 20.04 focal and the kernel is x86_64 Linux 5.15.0-72-generic. If you are using other devices, you may need to modify the code to make it work.
 
+### Install perf
+
+Follow is commands help you install perf on Ubuntu 20.04 focal.
+
+```bash
+sudo apt update
+sudo apt install linux-tools-common
+sudo apt install linux-tools-$(uname -r)
+```
+
 ## How to use
 
 ### Step 1: Clone the repository
