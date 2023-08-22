@@ -86,6 +86,7 @@ function profile() {
 }
 
 echo "executable: $1"
-echo "profile_period: $2"
+echo "executable: $executable"
+echo "profile_period: $profile_period"
 
 

@@ -36,18 +36,18 @@ function user_check() {
 
 function executable_detection() {
     if [[ ! -d "$target_executable" ]]; then
-        echo "$1 not found"
+        echo "$target_executable not found"
         exit 1
     fi
 }
 
 function path_detection() {
-    if [[ ! -d "$1" ]]; then
-        echo "$1 not found"
+    if [[ ! -d "$output_path" ]]; then
+        echo "$output_path not found"
         echo "creating......"
-        mkdir $1
+        mkdir $output_path
     fi
-    echo "${1}"
+    echo "${output_path}"
 }
 
 function check_environment() {
@@ -85,6 +85,7 @@ function profile() {
     done
 }
 
+init $1 $2
 executable_detection
 # get_target_executable
 check_environment
