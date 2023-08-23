@@ -35,13 +35,17 @@ function user_check() {
 }
 
 function executable_detection() {
-    if [[ ! -d "$target_executable" ]]; then
+    if [[ ! -f "$target_executable" ]]; then
         echo "$target_executable not found"
         exit 1
     fi
 }
 
 function path_detection() {
+    if [[ ! -d "../output/ " ]]; then
+        mkdir ../output
+    fi
+
     if [[ ! -d "$output_path" ]]; then
         echo "$output_path not found"
         echo "creating......"
@@ -75,13 +79,12 @@ function get_event_list() {
     while IFS= read -r line; do
         events_list+=("$line")
     done < "$input_file"
-    return $events_list
 }
 
 function profile() {
     for element in "${events_list[@]}"; do
         echo "Collecting data for $element"
-        perf stat -I $profile_period -e $element $target_executable -o $output_path/$element.txt $target_executable
+        perf stat -I $profile_period -e $element -o $output_path/$element.txt $target_executable
     done
 }
 
