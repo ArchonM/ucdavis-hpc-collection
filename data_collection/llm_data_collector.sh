@@ -85,7 +85,7 @@ function get_event_list() {
 function profile() {
     for element in "${events_list[@]}"; do
         echo "Collecting data for $element"
-        perf stat -I $profile_period -e $element -o $output_path/$element.txt $target_interpreter $target_executable
+        perf stat -I 10 -e $element -o $output_path/$element.txt $target_interpreter $target_executable
     done
 }
 
